@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name= VIPM 2017.0.0.2018 64-bit
+Comment=VI Package Manager (VIPM)
+Exec=/usr/local/JKI/VIPM/vipm %f
+StartupWMClass=vipm-17.0.2018
+Icon=VIPM_48x48_32bit
+Terminal=false
+Type=Application
+Categories=Application;Development;JKI;
+MimeType=application/x-vipm-vip;application/x-vipm-vipc;application/x-vipm-vipm
