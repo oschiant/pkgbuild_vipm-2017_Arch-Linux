@@ -1,7 +1,8 @@
 [Desktop Entry]
 Name= VIPM 2017.0.0.2018 64-bit
 Comment=VI Package Manager (VIPM)
-Exec=/usr/local/JKI/VIPM/vipm %f
+#Exec=/usr/local/JKI/VIPM/vipm %f
+Exec=gksu -k -u root /usr/local/JKI/VIPM/vipm #(funciona con zensu instalado)
 StartupWMClass=vipm-17.0.2018
 Icon=VIPM_48x48_32bit
 Terminal=false
