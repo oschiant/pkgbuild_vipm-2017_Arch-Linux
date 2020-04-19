@@ -21,16 +21,16 @@ Puede verificar el hash manualmente del archivo "vipm-17.0.2018-linux.tar.gz" un
 
 #  Changelog (eng)
 2020.04.12 ->
-  Initial compilation of the package for archlinux, to work properly you must run from console "$ sudo /usr/local/JKI/VIPM/vipm
-  To run this application it is necessary to have the LabVIEW2015SP1RTE module with at least 32 bits, since vipm is an ELF32 binary
-  Tested with LabVIEW-2018-SP1 linux, functional it allows to install packages, you only have to reconfigure labview since the instance of it that runs labview is in superuser mode.
-  It remains to allow execution in sudo mode through an icon to access the application, since it works in common user mode, the idea is to use gksu, but it does not work properly in gnome.
-  Missing to add icons and mime executables, to run the application from .vipm, .vim and .vipc file types.
+* Initial compilation of the package for archlinux, to work properly you must run from console "$ sudo /usr/local/JKI/VIPM/vipm
+* To run this application it is necessary to have the LabVIEW2015SP1RTE module with at least 32 bits, since vipm is an ELF32 binary
+* Tested with LabVIEW-2018-SP1 linux, functional it allows to install packages, you only have to reconfigure labview since the instance of it that runs labview is in superuser mode.
+* It remains to allow execution in sudo mode through an icon to access the application, since it works in common user mode, the idea is to use gksu, but it does not work properly in gnome.
+* Missing to add icons and mime executables, to run the application from .vipm, .vim and .vipc file types.
 
 # Notas de cambios: (esp) 
 2020.04.12 -->
-  Compilación inicial del paquete para archlinux, para funcionar adecuadamente debe ejecutar desde consola "$sudo /usr/local/JKI/VIPM/vipm"
-  Para ejecutar esta aplicación es necesario contar con el modulo LabVIEW2015SP1RTE al menos de 32 bits, ya que vipm es un binario ELF32
-  Probado con LabVIEW-2018-SP1 linux, funcional permite instalar paquetes, solamente debe volver a configuar labview ya que la instancia del mismo que ejecuta labview es en modo superusuario.
-  Falta permitir la ejecución en modo sudo mediante icono de acceso a aplicación, ya que funciona en modo usuario común la idea es usar gksu, pero el mismo no funciona adecuadamente en gnome.
-  Faltan agregar iconos y ejecutables mime, para ejecurar la aplicacion desde los tipos de archivos .vipm, .vim y .vipc.
+* Compilación inicial del paquete para archlinux, para funcionar adecuadamente debe ejecutar desde consola "$sudo /usr/local/JKI/VIPM/vipm"
+* Para ejecutar esta aplicación es necesario contar con el modulo LabVIEW2015SP1RTE al menos de 32 bits, ya que vipm es un binario ELF32
+* Probado con LabVIEW-2018-SP1 linux, funcional permite instalar paquetes, solamente debe volver a configuar labview ya que la instancia del mismo que ejecuta labview es en modo superusuario.
+* Falta permitir la ejecución en modo sudo mediante icono de acceso a aplicación, ya que funciona en modo usuario común la idea es usar gksu, pero el mismo no funciona adecuadamente en gnome.
+* Faltan agregar iconos y ejecutables mime, para ejecurar la aplicacion desde los tipos de archivos .vipm, .vim y .vipc.
