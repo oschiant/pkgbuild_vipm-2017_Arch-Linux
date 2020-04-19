@@ -14,6 +14,10 @@ Access the following link https://vipm.jki.net/download and select the package f
 You can manually check the hash of the file `vipm-17.0.2018-linux.tar.gz` once downloaded from the VIPM server, it would be the following hash `SHA256SUM e105211c39b207cae2c1c0d1fca05fe09364890b420a7e8493e1df46f53db373`. (also the PKGBUILD verifies it automatically)
 
 ### Changelog (eng)
+2020.04.18
+* Content is ordered and formats the README.md file to improve understanding.
+* Add dependency to the `zensu` package to be able to run` vipm` as superuser using the icon that is added to the Gnome applications. The user must belong to the `wheel` group to be able to run` vipm` in superuser mode. You can verify this by pasting the following command into a `$ groups $ USER` console.
+> * In the future the idea is to run vipm as superuser using a polkit rule since it is the native authentication method of most graphical environments. See the following link https://wiki.archlinux.org/index.php/Polkit.
 
 2020.04.12
 * Initial compilation of the package for Arch Linux, to work properly you must run from console
@@ -35,6 +39,10 @@ Puede verificar el hash manualmente del archivo `vipm-17.0.2018-linux.tar.gz` un
 
 
 ### Notas de cambios: (esp)
+2020.04.18
+* Se ordena contenido y da formato al archivo README.md para mejorar la comprensión.
+* Se agrega dependencia al paquete `zensu` para poder ejecutar `vipm`  como superusuario mediante el icono que se agrega a las aplicaciones de Gnome. El usuario deberá pertenecer al grupo `wheel` para poder ejecutar `vipm` en modo superusuario. Esto lo puede verificar pegando el siguiente comando en una consola `$ groups $USER`.
+> * En un futuro la idea es ejecutar vipm como superusuario mediante una regla polkit ya que es el metodo de autenticación nativo de la mayoría de los entornos gráficos. Vea el siguiente enlace https://wiki.archlinux.org/index.php/Polkit.
 
 2020.04.12
 * Compilación inicial del paquete para Arch Linux, para funcionar adecuadamente debe ejecutar desde consola 
