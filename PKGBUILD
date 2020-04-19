@@ -134,16 +134,16 @@ package() {
 
 2020.04.18
 * Se ordena contenido y da formato al archivo README.md para mejorar la comprensión.
-* Se agrega dependencia al paquete `zensu` para poder ejecutar `vipm`  como superusuario mediante el icono que se agrega a las aplicaciones de Gnome. El usuario deberá pertenecer al grupo `wheel` para poder ejecutar `vipm` en modo superusuario. Esto lo puede verificar pegando el siguiente comando en una consola `$ groups $USER`.
+* Se agrega dependencia al paquete zensu para poder ejecutar vipm  como superusuario mediante el icono que se agrega a las aplicaciones de Gnome. El usuario deberá pertenecer al grupo wheel para poder ejecutar vipm en modo superusuario. Esto lo puede verificar pegando el siguiente comando en una consola $ groups $ USER.
 > * En un futuro la idea es ejecutar vipm como superusuario mediante una regla polkit ya que es el metodo de autenticación nativo de la mayoría de los entornos gráficos. Vea el siguiente enlace https://wiki.archlinux.org/index.php/Polkit
 
 2020.04.12
 * Compilación inicial del paquete para Arch Linux, para funcionar adecuadamente debe ejecutar desde consola 
-`$ sudo /usr/local/JKI/VIPM/vipm`
-* Para ejecutar esta aplicación es necesario contar con el modulo LabVIEW2015SP1RTE al menos de 32 bits, ya que `vipm` es un binario ELF32.
+$ sudo /usr/local/JKI/VIPM/vipm
+* Para ejecutar esta aplicación es necesario contar con el modulo LabVIEW2015SP1RTE al menos de 32 bits, ya que vipm es un binario ELF32.
 * Probado con LabVIEW-2018-SP1 Linux, funcional permite instalar paquetes, solamente debe volver a configuar LabVIEW ya que la instancia del mismo que ejecuta LabVIEW es en modo superusuario.
-> * Falta permitir la ejecución en modo sudo mediante icono de acceso a aplicación, ya que funciona en modo usuario común la idea es usar `gksu`, pero el mismo no funciona adecuadamente en gnome.
-> * Faltan agregar iconos y ejecutables mime, para ejecutar la aplicación desde los tipos de archivos `.vipm`, `.vim` y `.vipc`.
+> * Falta permitir la ejecución en modo sudo mediante icono de acceso a aplicación, ya que funciona en modo usuario común la idea es usar gksu, pero el mismo no funciona adecuadamente en gnome.
+> * Faltan agregar iconos y ejecutables mime, para ejecutar la aplicación desde los tipos de archivos .vipm, .vim y .vipc.
                 
 
 #####################
