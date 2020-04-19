@@ -2,13 +2,13 @@
 
 pkgname='vipm'	
 pkgver='17.0.2018'
-pkgrel='1'
+pkgrel='2'
 pkgdesc="vipm 2017.0.0.2018 - VI Package Manager (VIPM)"
 arch=('i686' 'x86_64')
 url="http://vipm.jki.net"
 license=('custom:Copyright JKI')
 groups=()
-depends=('lib32-glibc' 'lib32-libxinerama' 'lib32-libglade')
+depends=('lib32-glibc' 'lib32-libxinerama' 'lib32-libglade' 'zensu') #zensu es necesario para poder ejecutar vipm como superusuario, lo llama vipm.desktop
 makedepends=('libarchive')
 optdepends=()
 provides=()
@@ -28,7 +28,7 @@ source=('file://vipm-17.0.2018-linux.tar.gz'
 noextract=()
 
 sha256sums=('e105211c39b207cae2c1c0d1fca05fe09364890b420a7e8493e1df46f53db373'
-            '3b140e3df30bde02cbfea1953c30a365b426338fffe5e385b6b326a4fd3fd659'
+            '2ab526d10746f49a8f57803245641e7e872b02e5528109e7df518cc62342dceb'
             #'fce7c521edb75a6d460543c492ac4c30f979ea39509aca59ea0cb6f4c8f1315b'
             #'aa1216069d70b9ee791b549727f1fa75c2f73816a971d340c66b75638b1e89e4'
             ) #autofill using updpkgsums
@@ -130,10 +130,20 @@ package() {
 ###  Changelog  ###
 ###################
  
- 2020.04.12 --> * Compilación inicial del paquete para archlinux, para funcionar adecuadamente debe ejecutar desde consola $sudo /usr/local/JKI/VIPM/vipm
-                * Para ejecutar esta aplicación es necesario contar con el modulo LabVIEW2015SP1RTE al menos de 32 bits, ya que vipm es un binario ELF32
-                * Falta permitir la ejecución en modo sudo mediante icono de acceso a aplicación, ya que funciona en modo usuario común la idea es usar gksu, pero el mismo no funciona adecuadamente en gnome
-                * Faltan agregar iconos y ejecutables mime, para ejecurar la aplicacion desde los tipos de archivos .vipm, .vim y .vipc.
+### Notas de cambios: (esp)
+
+2020.04.18
+* Se ordena contenido y da formato al archivo README.md para mejorar la comprensión.
+* Se agrega dependencia al paquete `zensu` para poder ejecutar `vipm`  como superusuario mediante el icono que se agrega a las aplicaciones de Gnome. El usuario deberá pertenecer al grupo `wheel` para poder ejecutar `vipm` en modo superusuario. Esto lo puede verificar pegando el siguiente comando en una consola `$ groups $USER`.
+> * En un futuro la idea es ejecutar vipm como superusuario mediante una regla polkit ya que es el metodo de autenticación nativo de la mayoría de los entornos gráficos. Vea el siguiente enlace https://wiki.archlinux.org/index.php/Polkit
+
+2020.04.12
+* Compilación inicial del paquete para Arch Linux, para funcionar adecuadamente debe ejecutar desde consola 
+`$ sudo /usr/local/JKI/VIPM/vipm`
+* Para ejecutar esta aplicación es necesario contar con el modulo LabVIEW2015SP1RTE al menos de 32 bits, ya que `vipm` es un binario ELF32.
+* Probado con LabVIEW-2018-SP1 Linux, funcional permite instalar paquetes, solamente debe volver a configuar LabVIEW ya que la instancia del mismo que ejecuta LabVIEW es en modo superusuario.
+> * Falta permitir la ejecución en modo sudo mediante icono de acceso a aplicación, ya que funciona en modo usuario común la idea es usar `gksu`, pero el mismo no funciona adecuadamente en gnome.
+> * Faltan agregar iconos y ejecutables mime, para ejecutar la aplicación desde los tipos de archivos `.vipm`, `.vim` y `.vipc`.
                 
 
 #####################
